@@ -92,7 +92,27 @@ namespace OutdoorSafehouseAdjustments
             {"false",   "AirfieldRegion",        "OBJ_MetalTroughA_Prefab",             "223.229",       "-739.1814, 294.7993, 1134.499"},
             {"false",   "AirfieldRegion",        "CONTAINER_KitchenCabinetD",             "90",       "328.0724, 201.7289, 1011.972"},
             {"false",   "AirfieldRegion",        "CONTAINER_SteamerTrunk",             "323.7494",       "-740.4617, 294.7993, 1136.31"},
+            {"false",   "AirfieldRegion",        "INTERACTIVE_BedMattressG",             "33.9328",       "-734.7939, 297.7632, 1131.562"},
+            {"false",   "AirfieldRegion",        "OBJ_RugY_Prefab",             "24.735",       "-734.0422, 297.7579, 1132.554"},
+            {"false",   "AirfieldRegion",        "OBJ_RugG_Prefab",             "130.0941",       "-737.9136, 294.7993, 1138.101"},
+            {"false",   "AirfieldRegion",        "OBJ_RugW_Prefab",             "130.2984",       "-739.7617, 294.8214, 1139.211"},
+            {"false",   "AirfieldRegion",        "OBJ_RugX_Prefab",             "133.9457",       "-733.2372, 294.7993, 1132.967"},
+            {"false",   "AirfieldRegion",        "OBJ_RugF_Prefab",             "310.317",       "-740.7252, 294.7993, 1136.599"},
+            {"false",   "AirfieldRegion",        "OBJ_RugH_Prefab",             "223.229",       "-738.0361, 294.8214, 1135.496"},
 
+            {"false",   "AirfieldRegion",        "OBJ_RugI_Prefab",             "0",       "329.0771, 208.6502, 1014.201"},
+            {"false",   "AirfieldRegion",        "OBJ_RugI_Prefab (1)",             "-0, 0, 0",       "327.6528, 208.6253, 1012.363"},
+            {"false",   "AirfieldRegion",        "OBJ_RugP_Prefab",             "264.09",       "325.9467, 208.6502, 1012.642"},
+            {"false",   "AirfieldRegion",        "OBJ_RugQ_Prefab",             "0",       "330.6923, 208.6502, 1017.804"},
+
+            {"false",   "AirfieldRegion",        "OBJ_PottedPlantC_Prefab",             "0",       "323.6055, 209.7138, 1015.941"},
+            {"false",   "AirfieldRegion",        "OBJ_PottedPlantC_Prefab (1)",             "274.7862",       "326.6073, 210.6118, 1010.757"},
+
+
+            {"false",   "AirfieldRegion",        "OBJ_PottedPlantB_Prefab",             "326.6727",       "-734.8719, 297.343, 1134.122"},
+            {"false",   "AirfieldRegion",        "OBJ_PottedPlantC_Prefab",             "282.1097",       "-736.028, 296.584, 1130.842"},
+            {"false",   "AirfieldRegion",        "OBJ_PottedPlantC_Prefab",             "71.4624",       "-735.6611, 295.2503, 1135.697"},
+            {"false",   "AirfieldRegion",        "OBJ_PottedPlantC_Prefab (1)",             "218.0752",       "-735.58, 297.314, 1133.389"},
             
             //Mystery Lake
             {"false",   "LakeRegion",        "INTERACTIVE_BunkBed",             "180.0005",       "789.6909, 212.9654, 966.4996"},
@@ -407,14 +427,8 @@ namespace OutdoorSafehouseAdjustments
                             { findTargetGO.SetActive(true); }
                         }
 
-                        // Desk ------------------------------------------------------------------------------------------
-                        if (itemDataArray[i, 2] == "CONTAINER_MetalDesk")
-                        {
-                            if (Settings.options.BIPLRemoveDesk)
-                            { findTargetGO.SetActive(false); }
-                            else
-                            { findTargetGO.SetActive(true); }
-                        }
+                        // Desk Items------------------------------------------------------------------------------------------
+
                         if (itemDataArray[i, 2] == "OBJ_ComputerMouse_Prefab")
                         {
                             if (Settings.options.BIPLRemoveDesk)
@@ -895,10 +909,6 @@ namespace OutdoorSafehouseAdjustments
                     }
 
 
-
-
-
-
                     // ==============================================================================================================
                     // Mystery Lake
                     // ==============================================================================================================
@@ -1120,6 +1130,75 @@ namespace OutdoorSafehouseAdjustments
                     if (itemDataArray[i, 1] == "AirfieldRegion")
                     {
 
+                        // Bed FA_MC ------------------------------------------------------------------------------------------
+
+                        if (itemDataArray[i, 2] == "INTERACTIVE_BedMattressG")
+                        {
+
+                            if (Settings.options.FAMCRemoveBed)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        // ------------------------------------------------------------------------------------------
+
+                        // Rug FA_MC ------------------------------------------------------------------------------------------
+
+                        if (itemDataArray[i, 2] == "OBJ_RugY_Prefab")
+                        {
+
+                            if (Settings.options.FAMCRemoveRug)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        // ------------------------------------------------------------------------------------------
+
+                        // All Rugs FA_MC ------------------------------------------------------------------------------------------
+
+                        if (itemDataArray[i, 2] == "OBJ_RugG_Prefab")
+                        {
+
+                            if (Settings.options.FAMCRemoveRugs)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        if (itemDataArray[i, 2] == "OBJ_RugH_Prefab")
+                        {
+
+                            if (Settings.options.FAMCRemoveRugs)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        if (itemDataArray[i, 2] == "OBJ_RugW_Prefab")
+                        {
+
+                            if (Settings.options.FAMCRemoveRugs)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        if (itemDataArray[i, 2] == "OBJ_RugX_Prefab")
+                        {
+
+                            if (Settings.options.FAMCRemoveRugs)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        if (itemDataArray[i, 2] == "OBJ_RugF_Prefab")
+                        {
+
+                            if (Settings.options.FAMCRemoveRugs)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        // ------------------------------------------------------------------------------------------
+
+
                         // Trough FA_MC ------------------------------------------------------------------------------------------
 
                         if (itemDataArray[i, 2] == "OBJ_MetalTroughA_Prefab")
@@ -1131,6 +1210,36 @@ namespace OutdoorSafehouseAdjustments
                             { findTargetGO.SetActive(true); }
                         }
                         // ------------------------------------------------------------------------------------------
+
+                        // Potted Plant ------------------------------------------------------------------------------------------
+                        if (itemDataArray[i, 2] == "OBJ_PottedPlantC_Prefab")
+                        {
+                            if (Settings.options.FAMCRemovePlants)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        if (itemDataArray[i, 2] == "OBJ_PottedPlantC_Prefab (1)")
+                        {
+                            if (Settings.options.FAMCRemovePlants)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        if (itemDataArray[i, 2] == "OBJ_PottedPlantC_Prefab")
+                        {
+                            if (Settings.options.FAMCRemovePlants)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
+                        if (itemDataArray[i, 2] == "OBJ_PottedPlantB_Prefab")
+                        {
+                            if (Settings.options.FAMCRemovePlants)
+                            { findTargetGO.SetActive(false); }
+                            else
+                            { findTargetGO.SetActive(true); }
+                        }
 
                         // Trunk ------------------------------------------------------------------------------------------
                         if (itemDataArray[i, 2] == "CONTAINER_SteamerTrunk")
@@ -1186,6 +1295,59 @@ namespace OutdoorSafehouseAdjustments
                         // ==============================================================================================================
                         if (itemDataArray[i, 1] == "AirfieldRegion")
                         {
+
+                            // All Rugs FA_DIC ------------------------------------------------------------------------------------------
+
+                            if (itemDataArray[i, 2] == "OBJ_RugI_Prefab")
+                            {
+
+                                if (Settings.options.FADICRemoveRugs)
+                                { findTargetGO.SetActive(false); }
+                                else
+                                { findTargetGO.SetActive(true); }
+                            }
+                            if (itemDataArray[i, 2] == "OBJ_RugI_Prefab (1)")
+                            {
+
+                                if (Settings.options.FADICRemoveRugs)
+                                { findTargetGO.SetActive(false); }
+                                else
+                                { findTargetGO.SetActive(true); }
+                            }
+                            if (itemDataArray[i, 2] == "OBJ_RugP_Prefab")
+                            {
+
+                                if (Settings.options.FADICRemoveRugs)
+                                { findTargetGO.SetActive(false); }
+                                else
+                                { findTargetGO.SetActive(true); }
+                            }
+                            if (itemDataArray[i, 2] == "OBJ_RugQ_Prefab")
+                            {
+
+                                if (Settings.options.FADICRemoveRugs)
+                                { findTargetGO.SetActive(false); }
+                                else
+                                { findTargetGO.SetActive(true); }
+                            }
+
+                            // ------------------------------------------------------------------------------------------
+
+                            // Potted Plant ------------------------------------------------------------------------------------------
+                            if (itemDataArray[i, 2] == "OBJ_PottedPlantC_Prefab")
+                            {
+                                if (Settings.options.FADICRemovePlants)
+                                { findTargetGO.SetActive(false); }
+                                else
+                                { findTargetGO.SetActive(true); }
+                            }
+                            if (itemDataArray[i, 2] == "OBJ_PottedPlantC_Prefab (1)")
+                            {
+                                if (Settings.options.FADICRemovePlants)
+                                { findTargetGO.SetActive(false); }
+                                else
+                                { findTargetGO.SetActive(true); }
+                            }
 
                             // Hidden Large Cabinet2 ------------------------------------------------------------------------------------------
 

@@ -61,8 +61,8 @@ namespace OutdoorSafehouseAdjustments
         [Description("Remove the Bulletin Board and Everything attached to it.")]
         public bool BIPLRemoveBBoard = false;
    
-        [Name("Remove Desk")]
-        [Description("Remove the Desk and Everything on it.")]
+        [Name("Remove Objects on Desk")]
+        [Description("Remove Everything on the desk.")]
         public bool BIPLRemoveDesk = false;
 
         [Name("Remove Chair")]
@@ -147,9 +147,25 @@ namespace OutdoorSafehouseAdjustments
         //Forsaken Airfield
         [Section("Forsaken Airfield - Mindful Cabin")]
 
+        [Name("Remove Bed")]
+        [Description("Remove the Bed.")]
+        public bool FAMCRemoveBed = false;
+
+        [Name("Remove Upstairs Rug")]
+        [Description("Remove the Upstairs Rug.")]
+        public bool FAMCRemoveRug = false;
+
+        [Name("Remove All Downstairs Rugs")]
+        [Description("Remove All Downstairs Rugs.")]
+        public bool FAMCRemoveRugs = false;
+
         [Name("Remove Trough")]
         [Description("Remove the Trough.")]
         public bool FAMCRemoveTrough = false;
+
+        [Name("Remove Potted Plants")]
+        [Description("Remove Potted Plants.")]
+        public bool FAMCRemovePlants = false;
 
         [Name("Move Trunk")]
         [Description("Move Trunk to Upper Level.")]
@@ -161,6 +177,14 @@ namespace OutdoorSafehouseAdjustments
 
 
         [Section("Forsaken Airfield - Drift Island Cabin")]
+
+        [Name("Remove all Rugs")]
+        [Description("Remove all Rugs.")]
+        public bool FADICRemoveRugs = false;
+
+        [Name("Remove Potted Plants")]
+        [Description("Remove Potted Plants.")]
+        public bool FADICRemovePlants = false;
 
         [Name("Enable Hidden Cabinet 1")]
         [Description("Enable a Hidden Cabinet in place of the End Table.")]
