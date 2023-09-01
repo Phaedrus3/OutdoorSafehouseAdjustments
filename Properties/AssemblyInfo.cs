@@ -32,7 +32,7 @@ using MelonLoader;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0")]
-[assembly: AssemblyFileVersion("1.0.0")]
-[assembly: MelonInfo(typeof(OutdoorSafehouseAdjustments.Implementation), "OutdoorSafehouseAdjustments", "1.0.0", "Phaedrus, santana")]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyFileVersion("1.1.0")]
+[assembly: MelonInfo(typeof(OutdoorSafehouseAdjustments.Implementation), "OutdoorSafehouseAdjustments", "1.1.0", "Phaedrus, santana")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]
